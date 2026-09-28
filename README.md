@@ -1,10 +1,12 @@
 # Verified Company Counts by City and Trade
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22722456.svg)](https://doi.org/10.5281/zenodo.22722456)
+
 How many home service companies pass license verification in each US city and trade, checked
 against the state register that issues the credential for that trade.
 
-**Version of 2026-09-11.** 15,099 rows, one per published city and trade: 384,462 verified company
-records across 3,106 cities, 10 states, 28 trades and 18 registers.
+**Version of 2026-09-27.** 15,237 rows, one per published city and trade: 392,689 verified company
+records across 3,116 cities, 10 states, 28 trades and 18 registers.
 
 Canonical page, always the newest version: https://homversa.com/data/verified-counts
 
@@ -83,7 +85,7 @@ which on every row; read it before comparing states.
 
 ## Citation
 
-> Homversa (2026). *Verified Company Counts by City and Trade*, version of 2026-09-11.
+> Homversa (2026). *Verified Company Counts by City and Trade*, version of 2026-09-27.
 > https://homversa.com/data/verified-counts. CC BY 4.0.
 
 Cite the version date. Two citations with different dates are two different snapshots.
