@@ -5,8 +5,10 @@
 How many home service companies pass license verification in each US city and trade, checked
 against the state register that issues the credential for that trade.
 
-**Version of 2026-09-27.** 15,237 rows, one per published city and trade: 392,689 verified company
-records across 3,116 cities, 10 states, 28 trades and 18 registers.
+**Version of 2026-10-09.** 15,125 rows, one per published city and trade, across 3,118 cities,
+10 states, 28 trades and 18 registers. The rows come from registers read between 2026-09-21 and
+2026-10-09: Arizona's register is held on its list of 2026-09-21, and every other register was
+read between then and 2026-10-09.
 
 Canonical page, always the newest version: https://homversa.com/data/verified-counts
 
@@ -48,6 +50,10 @@ cities by trades, and a missing row does not mean zero.
 
 ## What this data does not say
 
+- **Do not add up `verified_companies`.** A company counts in every row whose page lists it. Texas
+  roofing and water-damage rows count every certified firm within 20 miles of the city, so one
+  firm sits in many rows, and a company with offices in several cities appears in each. The sum
+  of the column (389,954 in this version) counts row entries, not companies.
 - **It is a floor, not a census.** It counts companies whose credential could be matched to a
   current record. Matching is imperfect, so the true licensed population is at least this large
   and probably larger.
@@ -76,6 +82,16 @@ a Texas roofing count measures who joined an association, not who may legally ro
 comparable with Florida roofing, which is a state license. The `register` column names which is
 which on every row; read it before comparing states.
 
+## What changed since the version of 2026-09-27
+
+- The registers were re-read (dates above; Arizona's is held on its 2026-09-21 list), so counts moved;
+  compare versions only as snapshots.
+- Texas roofing and water-damage towns whose page repeated a larger neighbor's list now fold into
+  that neighbor's page, so those towns no longer have rows of their own; the neighbor's row
+  covers them.
+- The headline total of the previous version summed this column; it is no longer given, for the
+  reason under "Do not add up `verified_companies`" above.
+
 ## Files
 
 - `verified-counts.csv` - the data. UTF-8, comma-separated, two leading comment lines beginning
@@ -85,7 +101,7 @@ which on every row; read it before comparing states.
 
 ## Citation
 
-> Homversa (2026). *Verified Company Counts by City and Trade*, version of 2026-09-27.
+> Homversa (2026). *Verified Company Counts by City and Trade*, version of 2026-10-09.
 > https://homversa.com/data/verified-counts. CC BY 4.0.
 
 Cite the version date. Two citations with different dates are two different snapshots.
